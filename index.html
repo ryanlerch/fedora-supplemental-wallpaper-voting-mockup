@@ -37,7 +37,7 @@ $( document ).ready(function() {
 	});
 
 	    $(document).on('click', '.hoveroverlay', function(){
-		if (votecount < voteamount){ 
+		if (votecount < totalvotes){ 
 			var clone = $(this).parent().clone();
 			var original = $(this).parent();
 			original.hide();
