@@ -37,14 +37,16 @@ $( document ).ready(function() {
 	});
 
 	    $(document).on('click', '.hoveroverlay', function(){
-		var clone = $(this).parent().clone();
-		var original = $(this).parent();
-		original.hide();
-		updateVoteCount(1);
-		clone.find(".hoveroverlay").hide();
-		clone.appendTo(".sidebar");
-		clone.click(function(){$(this).remove();original.show();updateVoteCount(-1);});
-    	});
+		if (votecount < voteamount){ 
+			var clone = $(this).parent().clone();
+			var original = $(this).parent();
+			original.hide();
+			updateVoteCount(1);
+			clone.find(".hoveroverlay").hide();
+			clone.appendTo(".sidebar");
+			clone.click(function(){$(this).remove();original.show();updateVoteCount(-1);});
+		}
+    	   });
 	
 
 });
