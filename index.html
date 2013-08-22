@@ -28,7 +28,7 @@ $( document ).ready(function() {
 	$(this).find("span:last").remove();
 	});
 
-	    $(document).on('click', '.hoveroverlay img', function(){
+	    $(document).on('click', '.hoveroverlay', function(){
 		var clone = $(this).parent().parent().clone();
 		clone.find(".hoveroverlay").hide();
 		clone.appendTo(".sidebar");
