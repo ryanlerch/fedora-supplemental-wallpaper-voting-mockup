@@ -40,7 +40,6 @@ $( document ).ready(function() {
 		var original = $(this).parent();
 		original.hide();
 		updateVoteCount(1);
-		alert(votecount);
 		clone.find(".hoveroverlay").hide();
 		clone.appendTo(".sidebar");
 		clone.click(function(){$(this).remove();original.show();updateVoteCount(-1);});
