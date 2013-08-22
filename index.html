@@ -30,9 +30,11 @@ $( document ).ready(function() {
 
 	    $(document).on('click', '.hoveroverlay', function(){
 		var clone = $(this).parent().clone();
+		var original = $(this)
+		original.hide();
 		clone.find(".hoveroverlay").hide();
 		clone.appendTo(".sidebar");
-		clone.click(function(){$(this).remove();});
+		clone.click(function(){$(this).remove();original.show();});
     	});
 	
 
