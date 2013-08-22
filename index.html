@@ -29,7 +29,7 @@ $( document ).ready(function() {
 	});
 
 	    $(document).on('click', '.hoveroverlay', function(){
-		var clone = $(this).parent().parent().clone();
+		var clone = $(this).parent().clone();
 		clone.find(".hoveroverlay").hide();
 		clone.appendTo(".sidebar");
     	});
