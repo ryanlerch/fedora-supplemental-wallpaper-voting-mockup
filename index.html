@@ -1,0 +1,101 @@
+<html>
+<head>
+<style>
+body{margin-right:205px;}
+.image>img {width:100%; padding-bottom:5px;}
+.sidebar {width:200px;height:100%; position:fixed; top:0; right:0; background-color:#eee; border-top-left-radius:30px; padding-top:40px;padding-left:5px;text-align:center}
+.photobody
+{
+   -webkit-column-count: 4;
+   -webkit-column-gap:   5px;
+   -moz-column-count:    4;
+   -moz-column-gap:      5px;
+   column-count:         4;
+   column-gap:           5px;
+}
+
+.image{position:relative;display:inline-block;}
+.hoveroverlay{position:absolute; width:100%; height:calc(100% - 5px); left:0;background-color:rgba(50,50,50,0.7);z-index:999;}
+.hoveroverlay img {position:absolute; bottom:10px; right:10px}
+</style>
+<script src="jquery-2.0.3.min.js"></script>
+<script>
+$( document ).ready(function() {
+	$(".image").hover( function () {
+		$(this).append($("<span class='hoveroverlay'><img src='click.png'></span>"));
+	},
+	function () {
+	$(this).find("span:last").remove();
+	});
+
+	    $(document).on('click', '.hoveroverlay img', function(){
+		var clone = $(this).parent().parent().clone();
+		clone.find(".hoveroverlay").hide();
+		clone.appendTo(".sidebar");
+    	});
+	
+
+});
+</script>
+</head>
+<body>
+<div class="sidebar">
+My Votes
+<span class="image"><img src="120px-African_Praying_Mantis_in_Spain_2560x1440_96dpi.jpg"/></span>
+</div>
+<div class="photobody">
+<span class="image"><img src="bigthumbs/798px-Cactus_small.jpg"/></span>
+<span class="image"><img src="bigthumbs/798px-Plant_small.jpg"/></span>
+<span class="image"><img src="bigthumbs/799px-Folha01.JPG"/></span>
+<span class="image"><img src="bigthumbs/800px-African_Praying_Mantis_in_Spain_2560x1440_96dpi.jpg"/></span>
+<span class="image"><img src="bigthumbs/800px-Atlantic_Ocean_at_Conil_de_la_Frontera_Spain_1560x1440_96dpi.jpg"/></span>
+<span class="image"><img src="bigthumbs/800px-Autumn_Lights_small.jpg"/></span>
+<span class="image"><img src="bigthumbs/800px-Bee_and_the_sunflower_by_nicubunu.jpg"/></span>
+<span class="image"><img src="bigthumbs/800px-Bird.JPG"/></span>
+<span class="image"><img src="bigthumbs/800px-Bluescherian.png"/></span>
+<span class="image"><img src="bigthumbs/800px-Cactus_2560x1440_96dpi.jpg"/></span>
+<span class="image"><img src="bigthumbs/800px-Cherry_1_by_Hylke_Bons.jpg"/></span>
+<span class="image"><img src="bigthumbs/800px-Cherry_2_by_Hylke_Bons.jpg"/></span>
+<span class="image"><img src="bigthumbs/800px-Chestnuts.jpg"/></span>
+<span class="image"><img src="bigthumbs/800px-Daisie.JPG"/></span>
+<span class="image"><img src="bigthumbs/800px-Diamantina.JPG"/></span>
+<span class="image"><img src="bigthumbs/800px-Dried_Flower_Petals.jpg"/></span>
+<span class="image"><img src="bigthumbs/800px-Fedora-printed-thumb.jpg"/></span>
+<span class="image"><img src="bigthumbs/800px-Flower-duo_by_Hylke_Bons.jpg"/></span>
+<span class="image"><img src="bigthumbs/800px-Food_for_thought_by_nicubunu.jpg"/></span>
+<span class="image"><img src="bigthumbs/800px-Forficulate.png"/></span>
+<span class="image"><img src="bigthumbs/800px-Grand_Canyon_Framed_small.jpg"/></span>
+<span class="image"><img src="bigthumbs/800px-Grass.jpg"/></span>
+<span class="image"><img src="bigthumbs/800px-Img_0001_31.jpeg"/></span>
+<span class="image"><img src="bigthumbs/800px-IMG_2025xxx.JPG"/></span>
+<span class="image"><img src="bigthumbs/800px-Late_Fall_Frost_on_Fern_Leaves.jpg"/></span>
+<span class="image"><img src="bigthumbs/800px-Leaves_by_Hylke_Bons.jpg"/></span>
+<span class="image"><img src="bigthumbs/800px-Moon_cornered.jpg"/></span>
+<span class="image"><img src="bigthumbs/800px-Morgentau-02.jpg"/></span>
+<span class="image"><img src="bigthumbs/800px-Nomadelfia.jpeg"/></span>
+<span class="image"><img src="bigthumbs/800px-Oil_fedora_wallpaper_16_9_small.jpg"/></span>
+<span class="image"><img src="bigthumbs/800px-PalazzoVecchio_small.jpg"/></span>
+<span class="image"><img src="bigthumbs/800px-Pencils_fedora_wallpaper_16_9_small.jpg"/></span>
+<span class="image"><img src="bigthumbs/800px-Plover_Cove_Reservoir_HK_by_Steven_Chien.png.jpeg"/></span>
+<span class="image"><img src="bigthumbs/800px-Sanibel-Gulls.jpg"/></span>
+<span class="image"><img src="bigthumbs/800px-Santa_maria_colorata_3.jpeg"/></span>
+<span class="image"><img src="bigthumbs/800px-Seaplane.png"/></span>
+<span class="image"><img src="bigthumbs/800px-Spring_bloom.jpeg"/></span>
+<span class="image"><img src="bigthumbs/800px-Street_lamp_fedora_wallpaper_16_9.jpg"/></span>
+<span class="image"><img src="bigthumbs/800px-Tambaba.jpg"/></span>
+<span class="image"><img src="bigthumbs/800px-Thunderbird-Falls-AK-2013.jpg"/></span>
+<span class="image"><img src="bigthumbs/800px-Tulips-2013_small.jpg"/></span>
+<span class="image"><img src="bigthumbs/800px-Underneath_small.jpg"/></span>
+<span class="image"><img src="bigthumbs/800px-Venice.png.jpeg"/></span>
+<span class="image"><img src="bigthumbs/800px-Water_Flower_by_Hylke_Bons.jpg"/></span>
+<span class="image"><img src="bigthumbs/800px-Weinblatt_morgentau-1.jpg"/></span>
+<span class="image"><img src="bigthumbs/800px-Wheels_of_time.jpg"/></span>
+<span class="image"><img src="bigthumbs/800px-Yellow_flower_02.JPG"/></span>
+<span class="image"><img src="bigthumbs/Chichiriviche.jpg"/></span>
+<span class="image"><img src="bigthumbs/Fedora-beach.jpg"/></span>
+<span class="image"><img src="bigthumbs/Frog-prince.jpg"/></span>
+<span class="image"><img src="bigthumbs/Gunbatimi.png"/></span>
+</div>
+</body>
+</html>
+
