@@ -20,8 +20,14 @@ body{margin-right:205px;}
 </style>
 <script src="jquery-2.0.3.min.js"></script>
 <script>
+var votecount = 0;
+function updateVoteCount(voteamount)
+{
+votecount=votecount+voteamount;
+alert(votecount);
+}
 $( document ).ready(function() {
-	var votecount = 0;
+
 	$(".image").hover( function () {
 		$(this).append($("<span class='hoveroverlay'><img src='click.png'></span>"));
 	},
@@ -33,11 +39,11 @@ $( document ).ready(function() {
 		var clone = $(this).parent().clone();
 		var original = $(this).parent();
 		original.hide();
-		votecount=votecount+1;
+		updateVoteCount(1);
 		alert(votecount);
 		clone.find(".hoveroverlay").hide();
 		clone.appendTo(".sidebar");
-		clone.click(function(){$(this).remove();original.show();votecount=votecount-1;alert(votecount);});
+		clone.click(function(){$(this).remove();original.show();updateVoteCount(-1);alert(votecount);});
     	});
 	
 
