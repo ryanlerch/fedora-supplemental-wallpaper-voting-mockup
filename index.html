@@ -32,7 +32,7 @@ $( document ).ready(function() {
 		var clone = $(this).parent().clone();
 		clone.find(".hoveroverlay").hide();
 		clone.appendTo(".sidebar");
-		clone.click(function(){alert("superpants")});
+		clone.click(function(){$(this).delete();});
     	});
 	
 
