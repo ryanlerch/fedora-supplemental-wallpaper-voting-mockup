@@ -21,6 +21,7 @@ body{margin-right:205px;}
 <script src="jquery-2.0.3.min.js"></script>
 <script>
 $( document ).ready(function() {
+	var votecount = 0;
 	$(".image").hover( function () {
 		$(this).append($("<span class='hoveroverlay'><img src='click.png'></span>"));
 	},
@@ -32,9 +33,10 @@ $( document ).ready(function() {
 		var clone = $(this).parent().clone();
 		var original = $(this).parent();
 		original.hide();
+		votecount=votecount+1;
 		clone.find(".hoveroverlay").hide();
 		clone.appendTo(".sidebar");
-		clone.click(function(){$(this).remove();original.show();});
+		clone.click(function(){$(this).remove();original.show();votecount=votecount-1;});
     	});
 	
 
