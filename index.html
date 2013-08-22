@@ -21,6 +21,7 @@ body{margin-right:205px;}
 <script src="jquery-2.0.3.min.js"></script>
 <script>
 var votecount = 0;
+var totalvotes = 5;
 function updateVoteCount(voteamount)
 {
 votecount=votecount+voteamount;
@@ -51,7 +52,7 @@ $( document ).ready(function() {
 </head>
 <body>
 <div class="sidebar">
-My Votes
+<span id="votecount">0</span> of <span id="totalvotes">0</span> Votes
 </div>
 <div class="photobody">
 <span class="image"><img src="bigthumbs/798px-Cactus_small.jpg"/></span>
